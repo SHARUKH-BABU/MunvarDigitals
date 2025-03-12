@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/LandingPage.css">
+    <title>Munvar Digitals</title>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader">
+        <h1 id="counter">0</h1>
+        <div class="overlay">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="loadingPageContainer">
+        <div class="landingPageHeader">
+            <span class="h1">M</span>
+            <span class="h1">U</span>
+            <span class="h1">N</span>
+            <span class="h1">V</span>
+            <span class="h1">A</span>
+            <span class="h1">R</span>
+        </div>
+        <div class="landingPageHero">
+            <img src="../../public/assests/logo.jpg" alt="Munvar Digitals">
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const counterElement = document.querySelector("#counter");
+            let currentValue = 0;
+
+            // Counter animation
+            const updateCounter = () => {
+                if (currentValue >= 100) return;
+                currentValue += Math.floor(Math.random() * 10) + 1;
+                if (currentValue > 100) currentValue = 100;
+                counterElement.innerText = currentValue;
+                setTimeout(updateCounter, Math.floor(Math.random() * 200) + 50);
+            };
+            updateCounter();
+
+            // GSAP Animations
+            gsap.to("#counter", { delay: 3.5, opacity: 0, duration: 0.3 });
+            gsap.to(".bar", {
+                delay: 3.5,
+                height: 0,
+                stagger: { amount: 0.5 },
+                ease: "power4.inOut",
+                duration: 1.5
+            });
+            gsap.to(".loader", { delay: 4, opacity: 0, duration: 1, onComplete: () => document.querySelector(".loader").remove() });
+
+            gsap.from(".h1", {
+                delay: 4,
+                y: 700,
+                stagger: { amount: 0.5 },
+                ease: "power4.inOut",
+                duration: 1.5
+            });
+
+            gsap.from(".landingPageHero", {
+                delay: 4.5,
+                y: 400,
+                ease: "power4.inOut",
+                duration: 2
+            });
+        });
+    </script>
+</body>
+</html>

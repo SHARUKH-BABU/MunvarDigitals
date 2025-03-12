@@ -1,0 +1,116 @@
+/* Container Styles */
+.services-container {
+  background: #0a192f;
+  min-height: 100vh;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* Title */
+.services-title {
+  font-size: 2.5rem;
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  color: red;
+  margin-bottom: 20px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tab {
+  background: #ddd;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.tab.active {
+  background: green;
+  color: white;
+  font-weight: bold;
+}
+
+/* Grid Layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Service Card */
+.service-card {
+  background: rgba(221, 221, 221, 0.3); /* Slight transparency */
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: 0.3s ease;
+  width: 100%; /* Default width */
+  cursor: pointer;
+}
+
+/* Image Hover Effect */
+.service-card:hover .service-img {
+  transform: scale(1.17);
+  transition: all 0.5s ease;
+}
+
+.img-container {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Service Image */
+.service-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Service Name */
+.service-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-title {
+      font-size: 2rem;
+  }
+  .tab {
+      font-size: 1rem;
+      padding: 10px 15px;
+  }
+  .service-name {
+      font-size: 1rem;
+  }
+}
+
+/* Phone Screen: Cards take 90% width */
+@media (max-width: 480px) {
+  .services-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .service-card {
+      width: 90%;
+  }
+}

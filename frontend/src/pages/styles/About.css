@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+/* General Styles */
+.about-container {
+  text-align: center;
+  padding: 80px 20px;
+  color: #fff;
+  background: #0a192f; /* Dark blue theme */
+  overflow-x: hidden;
+}
+
+/* Sections */
+.about-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Titles */
+.about-title {
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 3rem;
+  color: green; /* Gold */
+  margin-bottom: 20px;  
+}
+.about-title span{
+  color: red; /* Orange */
+}
+.about-description{
+  width: 70%;
+}
+
+.section-title {
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: red;
+  margin-bottom: 20px;
+}
+
+/* Services Section */
+.services-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  overflow-y: hidden;
+  padding: 20px;
+}
+
+.about-service-card {
+  background: linear-gradient(135deg, #1e3a8a, #6d28d9); /* Blue to Purple */
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: white;
+  transition: transform 0.3s;
+  min-height: 150px;
+}
+
+.about-service-card:hover {
+  transform: scale(1.05);
+}
+
+/* Customer Rating */
+.customer-rating {
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: green;
+}
+
+/* Team Section */
+.team-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 100px 0;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  background: rgba(0, 0, 0, 0.142); /* Matching service cards */
+  text-align: center;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  transition: transform 0.3s;
+}
+.team-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: green;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+}
+
+.team-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-section{
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+  }
+  .about-description{
+    width: 100%;
+  }
+  .about-title {
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  .services-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    margin: 0;
+  }
+  .services-list, .team-members {
+    flex-direction: column;
+    align-items: center;
+  }
+}

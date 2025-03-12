@@ -1,0 +1,99 @@
+.header {
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.262);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container .logo {
+    display: flex;
+    text-decoration: none;
+}
+
+.logo-name {
+    color: white;
+    font-size: 1.7rem;
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 40%;
+}
+
+.nav-links .nav-link {
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.nav-links .nav-link:hover {
+    font-weight: 600;
+}
+
+.nav-link.active {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    cursor: pointer;
+}
+
+/* Styles for mobile menu */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        flex-direction: column;
+        background-color: rgb(69, 63, 63);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        width: 90%;
+        padding: 20px 0;
+        font-weight: 500;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+}
